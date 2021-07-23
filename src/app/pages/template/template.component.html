@@ -54,7 +54,7 @@
              #email="ngModel">
             </div>
   </div>
-
+  <!-- <p *ngFor="let pais of paises">{{pais.name}}</p> -->
 
 
   <div class="form-group row">
@@ -68,11 +68,9 @@
 
 </form>
 
-<!-- <p>
-   País seleccionado: {{ pais | uppercase }}
-  <select [(ngModel)]="pais" class="form-control">
-    <option value="México">México</option>
-    <option value="Costa Rica">Costa Rica</option>
-    <option value="Colombia">Colombia</option>
-  </select>
-</p> -->
+<p class="mt-3">
+  Seleccione un país:
+  <select class="form-control">
+    <option *ngFor="let pais of paises" >{{pais.nombre}} - {{pais.codigo}}</option>
+    </select>
+</p>
